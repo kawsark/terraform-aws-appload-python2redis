@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #Install Docker
 sudo apt-get update -y
 sudo apt-get install \
@@ -15,9 +16,9 @@ sudo add-apt-repository \
    stable"
 sudo apt-get update -y
 sudo apt-get install docker-ce docker-ce-cli containerd.io -y
-groupadd docker
-usermod -aG docker ubuntu
-systemctl enable docker
+sudo groupadd docker
+sudo usermod -aG docker ubuntu
+sudo systemctl enable docker
 
 #Download application and build image
 cd /tmp && git clone https://github.com/kawsark/redis-client-service.git -b password
