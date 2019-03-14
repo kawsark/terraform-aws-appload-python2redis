@@ -41,7 +41,7 @@ resource "null_resource" "python2redis" {
   provisioner "remote-exec" {
     inline = [
     "chmod +x /tmp/script.sh",
-      "/tmp/script.sh args",
+      "sudo /tmp/script.sh",
     ]
   }
 }
